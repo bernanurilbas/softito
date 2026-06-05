@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Sayfası</title>
+</head>
+<body>
+
+    <h1>Kullanıcı formu</h1>
+    <form id="form">
+      <label for="İsim:"></label>
+        <br>
+      <input type="text" id="isim" required>
+          <br>
+      <label for="Soyisim:"></label>
+        <br>
+      <input type="text" id="soyisim" required>
+          <br>
+      <label for="Telefon Numarası:"></label>
+        <br>
+      <input type="tel" id="telefonnumarasi" required>
+           <br>
+        
+           <img id="fotograf"
+           src=""
+           width="150px">
+           <br>
+      <button type="submit">Gönder</button>
+        
+    </form>
+
+    <hr>
+
+    <div id="sonuc"></div>
+
+    <script>
+        document.getElementById("form").addEventListener("submit"),function(e) {
+          e.preventDefault();
+          const isim = document.getElementById("isim").value;
+          const soyisim =document.getElementById("soyisim").value;
+          const telefonnumarası =document.getElementById("telefon numarası").value;
+          const fotograf= document.getElementById("fotoğraf").src;
+          const reader = new FileReader();
+
+          reader.onload= function(event) {
+            document.getElementById("sonuc").innerHTML
+          }
+        }
+
+    </script>
+
+</body>
+</html>
