@@ -1,74 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <!-- //sayfanın mobil cihaz uyumunu sağlarız -->
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"/>
-    <!--//bu tailwindin css kütüphanesi hazır css kodlarını kullanmamızı sağlıyor-->
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <!-- //tarayıcı sekmesinde ki başlığı buradan belirleriz-->
-
-  </head>
-
-  <body class="bg-indigo-50 text-gray-800 font-sans min-h-screen p-8 flex flex-col items-center justify-center gap-6">
-    <!--// body yani kullanıcıya görünen bölümde bg/indigo renginde 50 değeri tanıdık , yazı rengini gri/800 yapıp minimum yüksekliği ekran boyutu kadar yaptık ,
-     iç boşluğuna 8 diyip flex oluşturduk , flex-col=dikey şekilde alt alta sıralama yaptık , items-center=flex içindekileri yatay da ortaladık ,
-     justify-center=flex içindekileri ortaladı , gap=elemanlar arasında boşluk bıraktı-->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen p-8 flex flex-col items-center justify-center gap-6">
     <div class="text-center max-w-md">
-    <!--//text-center=yazıları ortalar, max-w-md=maksimum genişlik ,medium ,yani orta boy-->
-
-      <div>
-        <h1 class="text-xl font-bold text-gray-900 mb-2"> 
-        <!--// h1=büyük başlık oluşturduk , font-bold=yazıyı kalınlaştırdık , text-gray-900=yazı rengi gri olup 900px olsun dedik ,
-        mb-2= başlığın altına 2px kadar boşluk bıraktık-->
-        Fiyatlandırma Kartı Flex Column
-        </h1>
-
+        <h1 class="text-xl font-bold text-gray-900 mb-2">Sosyal Paylaşım Barları</h1>
         <p class="text-xs text-gray-500">
-         <!--// text-xs= yazıyı en küçük şekilde gösterir , text-gray-500=yazı rengi gri olsun ve 500px olsun dedik-->
-          Kart elemanları üst üste sıralamak için flex-col, öne çıkan rozeti en
-          üstte göstermek için ise order-first sınıfı kullanacağız
+            Butonları Yatay Düzenleme Flex Ve Flex-row İle
         </p>
-      </div>
-
-      <div class="w-full max-w-xs bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
-        <!--// w-full= genişliğini ful verdik yani %100 bulunduğu alanı kapsamasını sağladık ,
-         max-w-xs= maksimum genişliği çok küçük olsun dedik , bg-white=rengi beyaz yaptık , border-gray-200=kenar rengi gri ve 200px değerinde , 
-         rounded-2xl= köşelerini 2xl yuvarla , p-6=iç boşluk genişliği 6 ,flex oluşturduk flex-col=dikey şekilde alt alta sıralama yaptık ,
-         gap-4=elemanlar arasında boşluk bıraktık , shadow-sm=elemana küçük bir gölge verdik-->
-
-        <div>
-            <h2 class="text-sm font-bold text-gray-800 uppercase tracking-wider">Standart Paket</h2>
-            <!-- //text-sm=yazıya küçük boyut verdik , font-bold=yazıyı kalınlaştırdık , text-gray-800=yazı rengine gri verdik ve 800px olsun , 
-             uppercase= bütün harfleri büyük yazdırır , tracking-wider=yazıda harfler arasında boşluğu arttırırız(wide den daha fazla boşluk arttırır)-->
-             <p class="text-2xl font-extrabold text-gray-900 mt-1">99 TL / Ay</p>
-             <!--//text-2xl=2xl büyüklüğünde yazıyı yaz, font-extrabold= yazıyı ekstra kalınlaştırır , text-gray-900= yazı rengi gri ve 900px değerinde ,
-              mt-1=elemana üst tarafta dıştan boşluk bırakır-->
-
-        </div>
-        <div class="px-2.5 py-1 bg-indigo-100 border border-indigo-200 text-indigo-700 text-[9px] font-extrabold rounded-full self-start order-first uppercase tracking-wide">
-        <!--//px-2.5=sağ ve sol eksenden iç boşkuk bırakırız, py-1= dikeyde iç boşluk bırakırız , bg-indigo-100= indigo rengi arka plan , border-indigo-200= kenar çizgilerini indigo rengi ve 200 değer verdik ,
-        text-indigo-700= yazıyı indigo rengi yaptık ve 700 tonunda değer verdik ,  text-[9px]=yazıda özel boyutlandrıma yaptık , font-extrabold=yazıyı ekstra kalınlaştırdık , rounded-full=köşeleri tamamen yuvarladık , 
-        self-start=flex içinde elemanın kendi başlangıcına hizzalamasını sağlar , order-first=flex container içinde ki elemanı en başa sabitelememize yarar , uppercase= bütün harfleri büyük yazdırır ,
-        tracking-wide= yazıda harfler arasında ki boşluğu arttırır-->
-            En Popüler Paket(order-first)
-        </div>
-        <div class="text-xs text-gray-500 space-y-2 border border-gray-100 pt-4">  
-        <!--//text-xs=yazıyı en küçük boyutta yazar , text-gray-500=yazıyı gri ve 500px değerinde yazar , space-y-2=flex elemanları arasında dikeyde boşluk bırakır ,
-        border-gray-100=kenar rengi gri ve 100px değerinde , pt-4=üstten iç boşluk ekleriz-->
-          <p>1 Sınırsız Proje</p>
-          <p>25 tane kişisel proje</p>
-          <p>Grup Çalışması</p>
-        </div>
-        <button class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold transition-colors mt-2">Satın Al</button>
-        <!--// w-full= genişliğini ful verdik yani %100 bulunduğu alanı kapsamasını sağladık ,  py-2= dikeyde iç boşluk bırakırız ,  bg-indigo-700= indigo rengi arka plan 700px değerinde ,
-        text-white=yazıyı beyaz renk yaptık , rounded-lg= köşeleri large büyüklüğünde yuvarladık , text-xs=yazıyı en küçük boyutta yazar , font-semibold=yazıyı orta/kalın ayarlar , 
-        transition-colors= renk geçişlerinde ki keskinliği önler yumuşatır , mt-2=üstten dış boşluk bırakır-->
-      </div>
     </div>
-  </body>
+    <div class="w-full max-w-md border border-gray-200 rounded-xl p-4 flex flex-wrap justify-between items-center gap-3 shadow-sm">
+        <button class="flex-1 py-3 px-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-sm font-semibold text-gray-700 transition-colors">Beğen</button>
+        <button class="flex-1 py-2 px-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-sm font-semibold text-gray-700 transition-colors">Paylaş</button>
+        <button class="flex-1 py-2 px-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-xs  font-semibold text-gray-700 transition-colors">Yorum Yap</button>
+        <button class="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold transition-colors">Kaydet</button>
+    </div>
+</body>
 </html>
