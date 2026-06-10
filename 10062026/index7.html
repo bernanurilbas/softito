@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+<body class="p-6 bbg-gray-200">
+  
+    <div class="p-6 bg-white">
+        <h1 class="text-xl font-bold">E ticaret sepet yönetimi</h1>
+        <div class="p-4 border">
+            <h2 class="text-lg font-bold">Ürün katalog</h2>
+            <div class="mb-2">
+                  <input type="text" id="search-input" placeholder="Ürün adı" class="p-2 border">
+            </div>
+            <button id="btn-search" class="p-2 bg-blue-200">katalog güncelle</button>
+            <div class="mt-4 space-y-2" id="prodact-list">
+                <p class="text-gray-500">Ürün listesini yüklemek için butona tıklayın</p>
+            </div>
+        </div>
+        <div class="mt-2"></div>
+        <div class="p-4 border">
+            <h2 class="text-lg font-bold">Alışveriş sepetim</h2>
+            <ul class="list-disc pl-5 space-y-1" id="cart-list">
+                <li>sepetiniz boş</li>
+            </ul>
+            <div class="mt-2 font-bold">toplam tutar: <span id="cart-total">0</span>TL</div>
+            <button id="btn-checkout" class="p-2 bg-green-200 mt-2">Alışverişi tamamla</button>
+        </div>
+        <div id="status" class="p-2 border">Sistem hazır</div>
+    </div>
+
+    <script>
+        const yedekUrunler=[
+            {"id":1, "title":'akıllı Telefon', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":2, "title":'ceket', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":3, "title":'kuru fasülye', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":4, "title":'gömlek', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":5, "title":'saat', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":6, "title":'şapka', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":7, "title":'pilav', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":8, "title":'köfte', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":9, "title":'spor ayakkabı', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+            {"id":10, "title":'bilgisayar', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
+        ]
+
+        let  sepet = [];
+
+
+        const urunleriSorrgula=async()=>{
+            const searchVal=document.getElementById('search-input').value.toLowerCase();
+            const listDiv=document.getElementById('product-list');
+            const status=document.getElementById('status');
+
+            status.innerText="ürünler listeleniyor...";
+            status.className='p-2 border';
+
+            let urunler=[];
+
+            try{
+                const response = await axios.get('https://kodusta.com/api/urunler.json');
+                urunler=response.data;
+            }catch(hata){
+                console.warm('cors hatası veya bağlantı hatası');
+                urunler=yedekUrunler;
+            }
+
+          const filtrelenmis=urunler.filter(u=>title.toLowerCase().includes(searchVal));
+
+          listDiv.innerHTML="";
+          if(filtrelenmis.lenght===0){
+            listDiv.innerHTML='<p class"p-2 text-red-500">ürün bulunamadı</p>';
+            return;
+          }
+          filtrelenmis.forEach(urun=>{
+            const itemDiv=document.createElement('div');
+            itemDiv.className="p-2 border";
+
+         itemDiv.innerHTML=`<strong>${}
+
+          })
+        }
+
+    </script>
+
+    
+</body>
+</html>
