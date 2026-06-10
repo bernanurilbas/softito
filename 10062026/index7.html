@@ -4,87 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-<body class="p-6 bbg-gray-200">
-  
-    <div class="p-6 bg-white">
-        <h1 class="text-xl font-bold">E ticaret sepet yönetimi</h1>
-        <div class="p-4 border">
-            <h2 class="text-lg font-bold">Ürün katalog</h2>
-            <div class="mb-2">
-                  <input type="text" id="search-input" placeholder="Ürün adı" class="p-2 border">
-            </div>
-            <button id="btn-search" class="p-2 bg-blue-200">katalog güncelle</button>
-            <div class="mt-4 space-y-2" id="prodact-list">
-                <p class="text-gray-500">Ürün listesini yüklemek için butona tıklayın</p>
-            </div>
+<body class="p-6 bg-gray-200">
+ <div class="p-6 bg-white">
+
+    <h1 class="text-xl font-bold">E-Ticaret sepet yönetimi</h1>
+
+    <div class="p-4 border">
+        <h2 class="text-lg font-bold">Ürün katalog</h2>
+
+        <div class="mb-2">
+            <input type="text" id="search-input" placeholder="Ürün adı" class="p-2 border">
         </div>
-        <div class="mt-2"></div>
-        <div class="p-4 border">
-            <h2 class="text-lg font-bold">Alışveriş sepetim</h2>
-            <ul class="list-disc pl-5 space-y-1" id="cart-list">
-                <li>sepetiniz boş</li>
-            </ul>
-            <div class="mt-2 font-bold">toplam tutar: <span id="cart-total">0</span>TL</div>
-            <button id="btn-checkout" class="p-2 bg-green-200 mt-2">Alışverişi tamamla</button>
+
+        <button id="btn-search" class="p-2 bg-blue-200">Katalog güncelle</button>
+
+        <div class="mt-4 space-y-2" id="product-list">
+            <p class="text-gray-500">Ürün listesini yüklemek için butona tıklayın</p>
         </div>
-        <div id="status" class="p-2 border">Sistem hazır</div>
+
     </div>
 
-    <script>
-        const yedekUrunler=[
-            {"id":1, "title":'akıllı Telefon', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":2, "title":'ceket', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":3, "title":'kuru fasülye', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":4, "title":'gömlek', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":5, "title":'saat', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":6, "title":'şapka', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":7, "title":'pilav', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":8, "title":'köfte', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":9, "title":'spor ayakkabı', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-            {"id":10, "title":'bilgisayar', 'katagori' : 'elektronik','fiyat':'15000','stok':5},
-        ]
+    <div class="mt-2"></div>
 
-        let  sepet = [];
+    <div class="p-4 border">
+        <h2 class="text-lg font-bold">Alışveriş sepetim</h2>
 
+        <ul class="list-disc pl-5 space-y-1" id="cart-list">
+            <li>Sepetiniz boş</li>
+        </ul>
 
-        const urunleriSorrgula=async()=>{
-            const searchVal=document.getElementById('search-input').value.toLowerCase();
-            const listDiv=document.getElementById('product-list');
-            const status=document.getElementById('status');
+        <div class="mt-2 font-bold">
+            Toplam tutar:<span id="cart-total">0</span>TL
+        </div>
 
-            status.innerText="ürünler listeleniyor...";
-            status.className='p-2 border';
+        <button id="btn-checkout" class="p-2 bg-green-200 mt-2">Alışverişi tamamla</button>
+    </div>
 
-            let urunler=[];
+    <div id="status" class="p-2 border">
+        Sistem hazır
+    </div>
+</div>
 
-            try{
-                const response = await axios.get('https://kodusta.com/api/urunler.json');
-                urunler=response.data;
-            }catch(hata){
-                console.warm('cors hatası veya bağlantı hatası');
-                urunler=yedekUrunler;
-            }
+<script>
+    const yedekUrunler=[
+        {"id":1,"title":'Akıllı telefon','kategori':'Elektronik','fiyat':'15000','stok':5},
+        {"id":2,"title":'Çeket','kategori':'Giyim','fiyat':'5000','stok':0},
+        {"id":3,"title":'Kuru fasülye','kategori':'Yemek','fiyat':'150000','stok':2},
+        {"id":4,"title":'Gömlek','kategori':'Giyim','fiyat':'200','stok':1},
+        {"id":5,"title":'Saat','kategori':'Elektronik','fiyat':'52000','stok':5},
+        {"id":6,"title":'Şapka','kategori':'Giyim','fiyat':'3000','stok':0},
+        {"id":7,"title":'Pilav','kategori':'Yemek','fiyat':'2345000','stok':1},
+        {"id":8,"title":'Köfte','kategori':'Yemek','fiyat':'123400','stok':2},
+        {"id":9,"title":'Spor ayakkabı','kategori':'Ayakkabı','fiyat':'1540','stok':5},
+        {"id":10,"title":'Bilgisayar','kategori':'Elektronik','fiyat':'454000','stok':5}
+    ]
 
-          const filtrelenmis=urunler.filter(u=>title.toLowerCase().includes(searchVal));
+    let sepet = [];
 
-          listDiv.innerHTML="";
-          if(filtrelenmis.lenght===0){
-            listDiv.innerHTML='<p class"p-2 text-red-500">ürün bulunamadı</p>';
+       const urunleriSorgula=async()=>{
+        const searchVal=document.getElementById('search-input').value.toLowerCase();
+        const listDiv=document.getElementById('product-list');
+        const status=document.getElementById('status');
+
+        status.innerText="Ürünler listeleniyor...";
+        status.className='p-2 border';
+        let urunler=[];
+
+        try{
+            const response = await axios.get('https://kodusta.com/api/urunler.json');
+            urunler=response.data;
+        }
+        catch(hata){
+            console.warn('Cors hatası veya bağlantı hatası');
+            urunler=yedekUrunler;
+        }
+
+        const filtrelenmis=urunler.filter(u=>title.toLowerCase().includes(searchVal));
+
+        listDiv.innerHTML="";
+        if(filtrelenmis.lenght===0){
+            listDiv.innerHTML='<p class="p-2 text-red-500">Ürün bulunamadı</p>';
             return;
-          }
-          filtrelenmis.forEach(urun=>{
+        }
+
+        filtrelenmis.forEach(urun=>{
             const itemDiv=document.createElement('div');
             itemDiv.className="p-2 border";
 
-         itemDiv.innerHTML=`<strong>${}
+            itemDiv.innerHTML=`<strong>${urun.title}</strong> - Kategori: ${urun.kategori}<br>
+            Fiyat:${urun.fiyat}TL | Stok: ${urun.stok > 0 ? urun.stok:'Tükenmiş'}<br>
+            <button class="p-1 bg-yellow-200 text-xs" onclick="sepeteEkleTiklandi(${urun.id})">Sepete ekle</button>`;
+            listDiv.appendChild(itemDiv);
+        })
+    }
 
-          })
-        }
-
-    </script>
-
+</script>
     
 </body>
 </html>
