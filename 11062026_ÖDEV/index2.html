@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body class="p-6 bg-gray-100"><center>
+    <div class="p-6 bg-white">
+       
+        <h1 class="text-xl font-bold">-JAVASCRİPT TEKRAR-</h1><br>
+
+   <div class="bg-gray-200">
+         <h1>Merhaba</h1> 
+         <h1 id="baslik">butona basmadın</h1>
+         <button class="bg-red-500 rounded shadow" onclick="tıkla()">Bas</button>
+   </div>
+
+   <script>
+        function tıkla(){
+            document.getElementById("baslik").innerHTML="butona bastın";
+        }
+    </script>
+
+
+ <br><br>
+
+
+  <div class="bg-gray-200">
+     <h1>Değiştir</h1>
+     <button class="bg-red-500 rounded shadow" id="change">Tıkla</button>
+     <p id="yazi">Değiştir</p>
+  </div> 
+  
+  <script>
+        let buton = document.getElementById('change');
+        let yazi = document.getElementById('yazi');
+        let tiklama = 0;
+        
+        buton.addEventListener("click" , function(){
+            tiklama++;
+            if(tiklama==1){
+                yazi.textContent="ESRA";
+            }
+            else if(tiklama==2) {
+                yazi.textContent="AYGEN";
+            }
+        } )
+    </script>
+
+
+  <br><br>
+
+  <div class="bg-gray-200">
+    <form id="bilgi-formu">
+      <input type="text" name="isim" id="isim" placeholder="Adınız" />
+      <input type="text" name="soyisim" id="soyisim" placeholder="Soyadınız" />
+      <input type="tel" name="tel" id="tel" placeholder="Telefonunuz" />
+      <input type="file" name="resim" id="resim" accept="image/*" />
+      <button class="bg-red-500 rounded shadow" type="submit" id="submit">Gönder</button>
+    </form>
+
+    <div id="sonuc">
+      <h3>Girilen Bilgiler:</h3>
+      <p><strong>Ad:</strong> <span id="yaz-isim"></span></p>
+      <p><strong>Soyad:</strong> <span id="yaz-soyisim"></span></p>
+      <p><strong>Telefon:</strong> <span id="yaz-tel"></span></p>
+      <p><strong>Yüklenen Resim:</strong></p>
+      <img
+        id="onizleme-resim"
+        width="50%"
+        src=""
+        alt="Yüklenen Resim Önizlemesi"
+        style="display: none"/>
+   </div>
+
+<script>
+      const form = document.getElementById("bilgi-formu");
+      const sonucDiv = document.getElementById("sonuc");
+      form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+        const isim = document.getElementById("isim").value;
+        const soyisim = document.getElementById("soyisim").value;
+        const tel = document.getElementById("tel").value;
+        const resimInput = document.getElementById("resim");
+
+        document.getElementById("yaz-isim").textContent = isim;
+        document.getElementById("yaz-soyisim").textContent = soyisim;
+        document.getElementById("yaz-tel").textContent = tel;
+
+        const resimDosyasi = resimInput.files[0];
+        const imgElement = document.getElementById("onizleme-resim");
+
+        if (resimDosyasi) {
+          const reader = new FileReader();
+
+          reader.onload = function (olay) {
+            imgElement.src = olay.target.result;
+            imgElement.style.display = "block";
+          };
+
+          reader.readAsDataURL(resimDosyasi);
+        } else {
+          imgElement.style.display = "none";
+        }
+
+        sonucDiv.style.display = "block";
+      });
+    </script>
+
+
+   <div class="mt-8 bg-white w-full p-6 rounded shadow">
+
+        <div  class=" bg-gray-200 w-full bg-white p-6 rounded shadow">
+        <h1 class="text-xl font-bold mb-6 text-slate-800" >Giriş Yap</h1>
+       <form class="space-y-4">
+        <div>
+            <label class="text-xs text-slate-600 block mb-1">E-posta</label>
+            <input class="w-full border p-2 rounded text-sm focus:out-none focus:border-blue-500" type="email" placeholder="Eposta adresinizi giriniz:">
+        </div>
+        <div>
+            <label>Şifre</label>
+            <input class="w-full border p-2 rounded text-sm focus:out-none focus:border-blue-500" type="password" placeholder="***********">
+        </div>
+        <button type="submit" class="w-full text-white font-semibold py-2 rounded bg-red-500">Giriş yap</button>
+    </form>
+    </div>
+
+    <br><br>
+
+     <div class="max-w-xl w-full bg-gray-100 p-6 rounded shadow">
+        <h1 class="text-xl font-bold mb-4">Taildwind Flexbox</h1>
+        <div class="flex flex-col gap-4">
+            <div>
+                <span class="text-xs text-slate-400 block mb-1">flex gap-4(yanyana yerleşim)</span>
+                    <div class="flex gap-4 bg-slate-55 p-3 border rounded">
+                    <div class="bg-red-500 text-white p-3 rounded">Kutu1</div>
+                    <div class="bg-red-500 text-white p-3 rounded">Kutu2</div>
+                    <div class="bg-red-500 text-white p-3 rounded">Kutu3</div>
+                </div>
+            </div>
+            <div>
+                <span class="text-xs text-slate-100 block mb-1">Flex (İki Uca Yaslama)</span>
+                <div class="flex justify-between items-center bg-slate-55 border rounded">
+                    <span class="font-semibold text-slate-700">Sol</span>
+                    <button class="bg-red-500 text-white px-2 py-2 rounded text-sm">Sağ</button>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+    <br><br>
+
+    <div class="bg-gray-200">
+    <style>
+        .classic-btn {
+         background-color: red;
+         color: black;
+         padding: 10px 20px;
+         border-radius: 8px;
+         border: none;
+         cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-100 p-10">
+    <div class="max-w-xl mx-auto bg-gray-100 p-6 rounded shadow">
+      <h1 class="text-xl font-bold mb-4">Modern CSS & Taildwind</h1>
+      <div class="mb-6">
+         <h2>Klasik CSS vr Tailwind</h2>
+         <div class="flex gap-4"></div>
+         <button class="classic-btn">Klasik CSS buton</button>
+         <button class="bg-red-500 text-white px-4 py-2 rounded">Taildwind CSS buton</button>
+      </div>
+    
+    <div class="mb-6"></div>
+    <h2 class="font-semibold mb-2">2. Temel Sınıflar</h2>
+    <div class="space-y-2">
+        <p class="text-lg text-red-500 font-bold">Kırmızı Büyük Metin (text-lg text-red-500 font-bold)</p>
+        <div class="flex gap-4">
+            <div class="bg-red-300 border p-3 rounded text-sm flex-1">Kırmızı kutu 1</div>
+            <div class="bg-red-300 border p-3 rounded text-sm flex-1">Kırmızı kutu 2</div>
+            <div class="bg-red-300 border p-3 rounded text-sm flex-1">Kırmızı kutu 3</div>
+        </div>
+
+         <div class="bg-slate-800 text-black p-4 rounded text-center hover:bg-slate-700">
+            Hover Deneme (hover:bg-slate-700)
+        </div>
+
+        <div class="mt-8 border-t pt-6 flex flex-wrap gap-3 text-xs">
+            <a href="index.html" target="_blank"></a>
+            <a href="index2.html" target="_blank"></a>
+            <a href="index3.html" target="_blank"></a>
+            <a href="index4.html" target="_blank"></a>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<br><br>
+
+   <div class="bg-gray-200 text-center max-w-md">
+        <h1 class="text-xl font-bold text-gray-900 mb-2">Sosyal Paylaşım Barları</h1>
+        <p class="text-xs text-gray-500">
+            Butonları Yatay Düzenleme Flex Ve Flex-row İle
+        </p>
+    </div>
+    <div class="w-full max-w-md border border-gray-200 rounded-xl p-4 flex flex-wrap justify-between items-center gap-3 shadow-sm">
+        <button class="flex-1 py-3 px-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-sm font-semibold text-gray-700 transition-colors">Beğen</button>
+        <button class="flex-1 py-2 px-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-sm font-semibold text-gray-700 transition-colors">Paylaş</button>
+        <button class="flex-1 py-2 px-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-xs  font-semibold text-gray-700 transition-colors">Yorum Yap</button>
+        <button class="py-2 px-4 bg-red-500 hover:bg-blue-900 text-white rounded-lg text-xs font-semibold transition-colors">Kaydet</button>
+    </div>
+</div>
+
+<br><br>
+
+<div class="bg-gray-200">
+     <div class="text-center max-w-md">
+        <h1 class="text-xl font-bold text-red-800 mb-2">Galeri (Izgara)</h1>
+        <p class="text-sm text-red-500">Fotoğraf albümü düzenlerini kartları 4 eşit sütüne yaymak için grid ve grid-cols-4 kullanacağız</p>
+    </div>
+    
+    <div class="w-full max-w-4xl bg-white border border-gray-200 rounded-xl p-6 grid grid-cols-4 gap-4 shadow-sm">
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50 flex flex-col gap-2 p-2">
+            <div class="h-28 bg-gray-200 rounded flex items-center justify-center text-[10px] text-red-300 font-medium">Doğa</div>
+            <div class="px-2 py-0.5 self-start bg-red-100 text-red-700 text-[8px] font-bold uppercase rounded">Açık Alan</div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50 flex flex-col gap-2 p-2">
+            <div class="h-28 bg-gray-200 rounded flex items-center justify-center text-[10px] text-red-300 font-medium">Mimari</div>
+            <div class="px-2 py-0.5 self-start bg-red-100 text-red-700 text-[8px] font-bold uppercase rounded">Tarih</div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50 flex flex-col gap-2 p-2">
+            <div class="h-28 bg-gray-200 rounded flex items-center justify-center text-[10px] text-red-300 font-medium">Dijital Tasarım</div>
+            <div class="px-2 py-0.5 self-start bg-red-100 text-red-700 text-[8px] font-bold uppercase rounded">Grafik</div>
+        </div>
+
+        <div class="border border-gray-200 rounded-lg overflow-hidden bg-gray-50 flex flex-col gap-2 p-2">
+            <div class="h-28 bg-gray-200 rounded flex items-center justify-center text-[10px] text-red-300 font-medium">Kültür</div>
+            <div class="px-2 py-0.5 self-start bg-red-100 text-red-700 text-[8px] font-bold uppercase rounded">Sanat</div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="mt-8 bg-white w-full p-6 rounded shadow">
+
+<div class="bg-gray-200 text-center max-w-xl rounded-xl">
+        <h1 class="text-xl font-bold text-gray-900 mb-2">Navigasyon (Navbar) Sistemi</h1>
+        <p class="text-xs text-gray-500">Mobilde gizlenen hambuger menü</p>
+    </div>
+    <nav class="w-full max-w-xl bg-gray-100 border border-gray-200 rounded-xl p-4 shadow-sm">
+         <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="font-exstrabold text-xs tracking-wider text-red-700">Berna Nur İLBAŞ</span>
+            </div>
+            <div class="hidden md:flex gap-4 text-[10px] font-bold text-gray-500">
+                <span class="hover:text-red-500 cursor-pointer">Hakkımızda</span>
+                <span class="hover:text-red-500 cursor-pointer">Hizmetler</span>
+                <span class="hover:text-red-500 cursor-pointer">Projeler</span>
+                <span class="hover:text-red-500 cursor-pointer">İletişim</span>
+            </div>
+            <button onclick="toggleMenu()" class="block md:hidden px-3 py-1 bg-gray-50 border border-gray-200 rounded text-[9px] font-exstrabold text-gray-700 hover:bg-gray-100 transition-colors">Menü</button>
+        </div>
+
+        <div id="mobile-menu" class="hidden mt-4 pt-4 border-t border-gray-100 flex-col gap-2 text-xs font-semibold text-gray-650">
+            <span class="text-indigo-600 cursor-pointer py-1 block">Hakkımızda</span>
+            <span class="text-indigo-600 cursor-pointer py-1 block">Hizmetler</span>
+            <span class="text-indigo-600 cursor-pointer py-1 block">Projeler</span>
+            <span class="text-indigo-600 cursor-pointer py-1 block">İletişim</span>
+        </div>
+    </nav>
+
+    </div>
+</div>
+
+<br><br>
+
+<div class="bg-gray-200">
+      <div>
+        <h3>1. BASİT KARESİNİ ALMA</h3>
+        <input type="number" id="input-number" value="10">
+        <button style="border: 1px;" id="btn-calc" class="bg-red-500 rounded">Hesapla</button>
+    </div>
+
+    <div id="calc-result">Sonuç: İşlem yapılmadı</div>
+
+    <div>
+        <h3>2. SAYAÇ RİSKİ FARKI</h3>
+        <div>
+            <button style="border:1px" id="btn-classic-timer" class="bg-red-300 rounded">Klasik sayaç</button>
+            <div id="classic-timer-display">0 (NAN)</div>
+        </div>
+    </div>
+
+    <div>
+        <button style="border: 1px;" id="btn-arrow-timer" class="bg-red-300 rounded">Arrow Sayaç</button>
+        <div id="arrow-timer-display">0</div>
+    </div>
+</div>
+
+  <script>
+        document.getElementById('btn-calc').addEventListener('click',()=> {
+            const num = parseFloat(document.getElementById('input-number').value)|| 0;
+            const karesi= x => x*x;
+            document.getElementById('calc-result').innerText='Karesi : '+karesi(num);
+        })
+
+        let classicId=null;
+        let arrowId=null;
+        document.getElementById('btn-classic-timer').addEventListener('click',()=>{
+         if(classicId) clearInterval(classicId);
+         const sayac0bj={
+            sayi:0,
+            baslat(){
+                classicId=setInterval(function(){
+                    this.sayi =(this.sayi|| 0)+1;
+                    document.getElementById('classic-timer-display').innerText=this.sayi;
+                },1000)
+            }
+         }
+         sayac0bj.baslat();
+        })
+        document.getElementById('btn-arrow-timer').addEventListener('click',()=>{
+            if(arrowId) clearInterval(arrowId);
+            const sayac0bj={
+                sayi:0,
+                baslat(){
+                    arrowId=setInterval(()=>{
+                        this.sayi++;
+                        document.getElementById('arrow-timer-display').innerText=this.sayi;
+                    },1000)
+                }
+            }
+            sayac0bj.baslat();
+        })
+    </script>
+
+
+<br><br>
+
+<div class="bg-gray-200">
+     <div>
+    <h1>Spread Operator (dağıtma)</h1>
+ </div>
+ <div>
+    <h3>Dizi kopyalama refaransı</h3>
+    <div>
+        <button id="btn-copy-ref" class="bg-red-500 rounded">Referans kopyalama(orjinali etkiler)</button>
+        <button id="btn-copy-spread" class="bg-red-500 rounded">Spread kopyalama(güvenli)</button>
+    </div>
+ </div>
+ <div>
+    <span>Orjinal dizi</span>
+    <div id="orig-arr">[]</div>
+ </div>
+ <div>
+    <span>Kopya dizi</span>
+    <div id="copy-arr">[]</div>
+ </div>
+     
+ <div>
+    <h3>2. Nesne birleştirme</h3>
+    <button id="btn-merge-obj" class="bg-red-300 rounded">Nesneleri Birleştir</button>
+    <div id="merge-result">Nesne birleştirilmedi</div>
+ </div>
+</div>
+
+<script>
+    let orijinal=['Kırmızı','Yeşil'];
+
+    document.getElementById('orig-arr').innerText=JSON.stringify(orijinal);
+
+    document.getElementById('btn-copy-ref').addEventListener('click',()=>{
+        orijinal=['Kırmızı','Yeşil'];
+        const kopya=orijinal;
+        kopya.push('Mavi');
+        document.getElementById('orig-arr').innerText=JSON.stringify(orijinal);
+        document.getElementById('copy-arr').innerText=JSON.stringify(kopya);
+    })
+
+    document.getElementById('btn-copy-spread').addEventListener('click',()=>{
+        orijinal=['Çilek','Mango'];
+        const kopya= [...orijinal];
+        kopya.push('Ananas');
+        document.getElementById('orig-arr').innerText=JSON.stringify(orijinal);
+        document.getElementById('copy-arr').innerText=JSON.stringify(kopya);
+    })
+
+    document.getElementById('btn-merge-obj').addEventListener('click', ()=>{
+        const varsayilan={tema:'koyu',dil:'TR'};
+        const kullanici={dil:'EN'};
+        const sonNesne={...varsayilan,...kullanici};
+        document.getElementById('merge-result').innerHTML=`<div>Oluşan Nesne:${JSON.stringify(sonNesne)}</div>`
+
+    })
+ </script>
+
+ <br><br>
+
+<div class="bg-gray-200">
+    <h3>Dinamik Argüman Toplama</h3><br>
+    <div>
+        <input type="text" id="input-args" value="10,20,30">
+        <button id="btn-sum" class="bg-red-500 rounded">Topla</button>
+    </div><br>
+    <div id="sum-result">Toplam:</div>
+</div>
+<div class="bg-gray-200">
+    <h3>Rest Elemanı</h3><br>
+    <button id="btn-rest" class="bg-red-300 rounded">Diziyi Parçala</button><br>
+    <div id="rest-result">Sonuç Oluşturulmadı</div><br>
+</div>
+
+
+<script>
+    document.getElementById('btn-sum').addEventListener('click',()=>{
+        const text= document.getElementById('input-args').value;
+        const sayilar=text.split(',').map(x => parseFloat(x.trim())||0);
+        const topla=(...parametreler)=>{
+            return parametreler.reduce((a,b)=>a+b,0);
+        }
+        document.getElementById('sum-result').innerText='Toplam sonuç:'+topla(...sayilar);
+    })
+
+  document.getElementById('btn-rest').addEventListener('click',()=>{
+    const veriler =['Berna','front-10', 90,10,20];
+    const[ad,sinif,...notlar]=veriler;
+    document.getElementById('rest-result').innerHTML=`
+    <div>Ad:${ad}</div>
+    <div>Sınıf:${sinif}</div>
+    <div>Notlar:(rest dizisi):${JSON.stringify(notlar)}</div>`
+  })
+
+</script>
+
+
+</div>
+
+    </center>
+</body>
+</html>
