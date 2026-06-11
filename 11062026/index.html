@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +64,7 @@
     ]
 
     let sepet = [];
+    let tumUrunler = [];
 
        const urunleriSorgula=async()=>{
         const searchVal=document.getElementById('search-input').value.toLowerCase();
@@ -81,6 +83,7 @@
             console.warn('Cors hatası veya bağlantı hatası');
             urunler=yedekUrunler;
         }
+        tumUrunler = urunler;
 
         const filtrelenmis=urunler.filter(u=>u.title.toLowerCase().includes(searchVal));
 
@@ -131,7 +134,7 @@
         status.innerText="stok sorgulanıyor...";
         status.className="p-2 border";
 
-        const urun=yedekUrunler.find(u=>u.id===urunId);
+        const urun=tumUrunler.find(u=>u.id===urunId);
         
         try{
             const stokMesaji=await stokKontrolEt(urun);
