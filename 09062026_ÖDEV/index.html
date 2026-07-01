@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Methodları</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+</head>
+<body class="bg-green-200 flex justify-center pt-10">
+    <div class="bg-green-500 font-semibold shadow-lg w-2/3 max-w-3xl">
+    <h1 class="text-2xl font-bold py-5 text-green-800 text-center">-JavaScript Metodları Örneklendirme-</h1>
+
+            <hr class="h-1 bg-green-200 border-0">
+
+    <div class="bg-green-100 p-5 border-t text-center">
+
+           <h2>Map()</h2>
+           <p>Her elemanı ikiyle çarpar:</p>
+           <button onclick="mapCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+           <p id="mapSonuc" class="text-green-500 mt-2"></p>
+
+       </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+        <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Find()</h2>
+            <p>20'den sonra büyük ilk sayıyı bulur:</p>
+            <button onclick="findCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="findSonuc" class="text-green-500 mt-2"></p>
+        </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+        <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Reduce()</h2>
+            <p>[5,8,10] toplamı bulur:</p>
+            <button onclick="reduceCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="reduceSonuc" class="text-green-500 mt-2"></p>
+        </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+        <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Filter()</h2>
+            <p>Çift sayıları getirir:</p>
+           <button onclick="filterCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+           <p id="filterSonuc" class="text-green-500 mt-2"></p>
+        </div>  
+
+          <hr class="h-1 bg-green-200 border-0">
+
+         <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Some()</h2>
+            <p>En az bir çift sayi var mı?</p>
+            <button onclick="someCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="someSonuc" class="text-green-500 mt-2"></p>
+        </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Every()</h2>
+            <p>Tüm sayılar çift mi?</p>
+            <button onclick="everyCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="everySonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Push()</h2>
+            <p>Dizinin sonuna ekler:</p>
+            <button onclick="pushCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="pushSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>İncludes()</h2>
+            <p>"Çilek" var mı?</p>
+            <button onclick="includesCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="includesSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>toLowerCase()</h2>
+            <p>"ESRA"</p>
+            <button onclick="lowerCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="lowerSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>toUpperCase()</h2>
+            <p>"aygen"</p>
+            <button onclick="upperCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="upperSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Trim()</h2>
+            <p>" Merhaba "</p>
+            <button onclick="trimCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="trimSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Split()</h2>
+            <p>"Esra,Aygen,Berna"</p>
+            <button onclick="splitCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="splitSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+          <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+            <h2>Join()</h2>
+            <p>"Esra,Aygen,Berna"</p>
+            <button onclick="joinCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+            <p id="joinSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+            <hr class="h-1 bg-green-200 border-0">
+
+          <div class="bg-green-100 p-5 border-t text-center">
+             <h2>parseFloat()</h2>
+             <p>"16.56"</p>
+             <button onclick="floatCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Çalıştır</button>
+             <p id="floatSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+              <hr class="h-1 bg-green-200 border-0">
+
+            <div class="bg-green-100 p-5 border-t text-center">
+                <h2>setInterval()</h2>
+                <p>Her bir saniyede tekrar eder / çalışır:</p>
+                <button onclick="intervalCalistir()" class="bg-green-600 text-white px-3 py-1 rounded mt-2">Başlat</button>
+                <p id="intervalSonuc" class="text-green-500 mt-2"></p>
+            </div>
+
+                <hr class="h-1 bg-green-200 border-0">
+
+            <div class="bg-green-100 p-5 border-t text-center">
+                <h2>clearInterval()</h2>
+                <p>setInterval'i durdurur:</p>
+                <button onclick="clearCalistir()" class="bg-red-600 text-white px-3 py-1 rounded mt-2">Durdur</button>
+                <p id="clearSonuc" class="text-green-500 mt-2"></p>
+          </div>
+
+    </div>
+
+    <script>
+
+     function mapCalistir() {
+     let sonuc = [5,10,15].map(x => x * 2);
+     document.getElementById("mapSonuc").textContent = "[" + sonuc + "]";
+    }
+     function findCalistir() {
+     let sonuc = [10,20,30,40].find(x => x > 20);
+     document.getElementById("findSonuc").textContent = sonuc;
+   }
+    function reduceCalistir() {
+    let sonuc = [5,8,10].reduce((a,b) => a + b);
+    document.getElementById("reduceSonuc").textContent = sonuc;
+   }
+    function filterCalistir() {
+    let sonuc = [1,2,3,4,5,6,7,8,9,10].filter(x => x % 2 === 0);
+    document.getElementById("filterSonuc").textContent = "[" + sonuc + "]";
+   }
+    function someCalistir() {
+    let sonuc = [1,3,5,6].some(x => x % 2 === 0);
+    document.getElementById("someSonuc").textContent = sonuc;
+   }
+    function everyCalistir() {
+    let sonuc = [2,4,6,7].every(x => x % 2 === 0);
+    document.getElementById("everySonuc").textContent = sonuc;
+   }
+    function pushCalistir() {
+    let meyveler = ["Çilek","Mango"];
+    meyveler.push("Erik");
+    document.getElementById("pushSonuc").textContent = "[" + meyveler + "]";
+  }
+    function includesCalistir() {
+    let sonuc = ["Çilek","Mango","Erik"].includes("Çilek");
+    document.getElementById("includesSonuc").textContent = sonuc;
+  }
+    function lowerCalistir() {
+    document.getElementById("lowerSonuc").textContent ="ESRA".toLowerCase();
+   }
+    function upperCalistir() {
+    document.getElementById("upperSonuc").textContent ="aygen".toUpperCase();
+  }
+    function trimCalistir() {
+    document.getElementById("trimSonuc").textContent =" Merhaba ".trim();
+  }
+   function splitCalistir() {
+    document.getElementById("splitSonuc").textContent ='["' + "Esra,Aygen,Berna".split(",").join('","') + '"]';
+  }
+   function joinCalistir() {
+   document.getElementById("joinSonuc").textContent =["Esra","Aygen","Berna"].join("-");
+  }
+   function floatCalistir() {
+   document.getElementById("floatSonuc").textContent =parseFloat("16.56");
+  } 
+        
+               let intervalId;
+               function intervalCalistir() {
+               let sayi = 10;
+               intervalId = setInterval(() => {
+              document.getElementById("intervalSonuc").textContent = sayi;
+              sayi++;
+           }, 1000);
+        }    
+
+               function clearCalistir() {
+               clearInterval(intervalId);
+               document.getElementById("clearSonuc").textContent ="Sayaç durduruldu";
+            }
+
+</script>
+</body>
+</html>

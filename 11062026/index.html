@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0916adc93bf26f9d51d131f9b6e7187fe741b683
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +67,10 @@
     ]
 
     let sepet = [];
+<<<<<<< HEAD
+=======
+    let tumUrunler = [];
+>>>>>>> 0916adc93bf26f9d51d131f9b6e7187fe741b683
 
        const urunleriSorgula=async()=>{
         const searchVal=document.getElementById('search-input').value.toLowerCase();
@@ -81,6 +89,10 @@
             console.warn('Cors hatası veya bağlantı hatası');
             urunler=yedekUrunler;
         }
+<<<<<<< HEAD
+=======
+        tumUrunler = urunler;
+>>>>>>> 0916adc93bf26f9d51d131f9b6e7187fe741b683
 
         const filtrelenmis=urunler.filter(u=>u.title.toLowerCase().includes(searchVal));
 
@@ -131,7 +143,11 @@
         status.innerText="stok sorgulanıyor...";
         status.className="p-2 border";
 
+<<<<<<< HEAD
         const urun=yedekUrunler.find(u=>u.id===urunId);
+=======
+        const urun=tumUrunler.find(u=>u.id===urunId);
+>>>>>>> 0916adc93bf26f9d51d131f9b6e7187fe741b683
         
         try{
             const stokMesaji=await stokKontrolEt(urun);
@@ -204,4 +220,8 @@
 </script>
     
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 0916adc93bf26f9d51d131f9b6e7187fe741b683

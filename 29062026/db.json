@@ -1,0 +1,1141 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ahmet",
+      "surname": "Yılmaz",
+      "email": "test@test.com",
+      "password": "password123",
+      "phone": "05551234567"
+    },
+    {
+      "name": "berna",
+      "surname": "ilbaş",
+      "phone": "5304567902",
+      "email": "berna@gmail.com",
+      "password": "12345",
+      "id": "SbK0dW5mt8A"
+    },
+    {
+      "name": "nur",
+      "surname": "yılmaz",
+      "phone": "5347301435",
+      "email": "nur@gmail.com",
+      "password": "1234",
+      "id": "HTXUX0FXip4"
+    },
+    {
+      "name": "berna nur ",
+      "surname": "ilbaş",
+      "phone": "05343042413",
+      "email": "bernanurilbas@gmail.com",
+      "password": "berna__258200",
+      "id": "Qyg7Nc_i-ek"
+    },
+    {
+      "name": "berna nur ",
+      "surname": "ilbaş",
+      "phone": "5343042413",
+      "email": "ilbasberna@gmail.com",
+      "password": "12345",
+      "id": "H-gT4H7s66c"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "b1",
+      "type": "bus",
+      "company": "Kamil Koç",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "09:00",
+      "price": 650,
+      "seats": [
+        {
+          "number": 1,
+          "status": "booked"
+        },
+        {
+          "number": 2,
+          "status": "booked"
+        },
+        {
+          "number": 3,
+          "status": "available"
+        },
+        {
+          "number": 4,
+          "status": "booked"
+        },
+        {
+          "number": 5,
+          "status": "booked"
+        },
+        {
+          "number": 6,
+          "status": "available"
+        },
+        {
+          "number": 7,
+          "status": "booked"
+        },
+        {
+          "number": 8,
+          "status": "booked"
+        },
+        {
+          "number": 9,
+          "status": "available"
+        },
+        {
+          "number": 10,
+          "status": "available"
+        },
+        {
+          "number": 11,
+          "status": "available"
+        },
+        {
+          "number": 12,
+          "status": "booked"
+        },
+        {
+          "number": 13,
+          "status": "available"
+        },
+        {
+          "number": 14,
+          "status": "available"
+        },
+        {
+          "number": 15,
+          "status": "available"
+        },
+        {
+          "number": 16,
+          "status": "available"
+        },
+        {
+          "number": 17,
+          "status": "booked"
+        },
+        {
+          "number": 18,
+          "status": "booked"
+        },
+        {
+          "number": 19,
+          "status": "booked"
+        },
+        {
+          "number": 20,
+          "status": "available"
+        },
+        {
+          "number": 21,
+          "status": "available"
+        },
+        {
+          "number": 22,
+          "status": "available"
+        },
+        {
+          "number": 23,
+          "status": "available"
+        },
+        {
+          "number": 24,
+          "status": "available"
+        },
+        {
+          "number": 25,
+          "status": "booked"
+        },
+        {
+          "number": 26,
+          "status": "available"
+        },
+        {
+          "number": 27,
+          "status": "available"
+        },
+        {
+          "number": 28,
+          "status": "available"
+        },
+        {
+          "number": 29,
+          "status": "available"
+        },
+        {
+          "number": 30,
+          "status": "booked"
+        },
+        {
+          "number": 31,
+          "status": "available"
+        },
+        {
+          "number": 32,
+          "status": "available"
+        },
+        {
+          "number": 33,
+          "status": "available"
+        },
+        {
+          "number": 34,
+          "status": "available"
+        },
+        {
+          "number": 35,
+          "status": "available"
+        },
+        {
+          "number": 36,
+          "status": "available"
+        },
+        {
+          "number": 37,
+          "status": "booked"
+        },
+        {
+          "number": 38,
+          "status": "available"
+        },
+        {
+          "number": 39,
+          "status": "available"
+        },
+        {
+          "number": 40,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "type": "bus",
+      "company": "Metro Turizm",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "12:30",
+      "price": 600,
+      "seats": [
+        {
+          "number": 1,
+          "status": "booked"
+        },
+        {
+          "number": 2,
+          "status": "available"
+        },
+        {
+          "number": 3,
+          "status": "booked"
+        },
+        {
+          "number": 4,
+          "status": "booked"
+        },
+        {
+          "number": 5,
+          "status": "available"
+        },
+        {
+          "number": 6,
+          "status": "available"
+        },
+        {
+          "number": 7,
+          "status": "booked"
+        },
+        {
+          "number": 8,
+          "status": "available"
+        },
+        {
+          "number": 9,
+          "status": "available"
+        },
+        {
+          "number": 10,
+          "status": "available"
+        },
+        {
+          "number": 11,
+          "status": "available"
+        },
+        {
+          "number": 12,
+          "status": "available"
+        },
+        {
+          "number": 13,
+          "status": "booked"
+        },
+        {
+          "number": 14,
+          "status": "booked"
+        },
+        {
+          "number": 15,
+          "status": "available"
+        },
+        {
+          "number": 16,
+          "status": "available"
+        },
+        {
+          "number": 17,
+          "status": "booked"
+        },
+        {
+          "number": 18,
+          "status": "booked"
+        },
+        {
+          "number": 19,
+          "status": "available"
+        },
+        {
+          "number": 20,
+          "status": "available"
+        },
+        {
+          "number": 21,
+          "status": "booked"
+        },
+        {
+          "number": 22,
+          "status": "booked"
+        },
+        {
+          "number": 23,
+          "status": "available"
+        },
+        {
+          "number": 24,
+          "status": "available"
+        },
+        {
+          "number": 25,
+          "status": "available"
+        },
+        {
+          "number": 26,
+          "status": "available"
+        },
+        {
+          "number": 27,
+          "status": "available"
+        },
+        {
+          "number": 28,
+          "status": "available"
+        },
+        {
+          "number": 29,
+          "status": "available"
+        },
+        {
+          "number": 30,
+          "status": "available"
+        },
+        {
+          "number": 31,
+          "status": "available"
+        },
+        {
+          "number": 32,
+          "status": "available"
+        },
+        {
+          "number": 33,
+          "status": "available"
+        },
+        {
+          "number": 34,
+          "status": "available"
+        },
+        {
+          "number": 35,
+          "status": "booked"
+        },
+        {
+          "number": 36,
+          "status": "booked"
+        },
+        {
+          "number": 37,
+          "status": "available"
+        },
+        {
+          "number": 38,
+          "status": "available"
+        },
+        {
+          "number": 39,
+          "status": "available"
+        },
+        {
+          "number": 40,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "b3",
+      "type": "bus",
+      "company": "Varan Turizm",
+      "from": "Ankara",
+      "to": "İstanbul",
+      "date": "2026-06-30",
+      "time": "15:00",
+      "price": 700,
+      "seats": [
+        {
+          "number": 1,
+          "status": "booked"
+        },
+        {
+          "number": 2,
+          "status": "available"
+        },
+        {
+          "number": 3,
+          "status": "available"
+        },
+        {
+          "number": 4,
+          "status": "available"
+        },
+        {
+          "number": 5,
+          "status": "available"
+        },
+        {
+          "number": 6,
+          "status": "available"
+        },
+        {
+          "number": 7,
+          "status": "available"
+        },
+        {
+          "number": 8,
+          "status": "available"
+        },
+        {
+          "number": 9,
+          "status": "available"
+        },
+        {
+          "number": 10,
+          "status": "booked"
+        },
+        {
+          "number": 11,
+          "status": "available"
+        },
+        {
+          "number": 12,
+          "status": "available"
+        },
+        {
+          "number": 13,
+          "status": "available"
+        },
+        {
+          "number": 14,
+          "status": "available"
+        },
+        {
+          "number": 15,
+          "status": "available"
+        },
+        {
+          "number": 16,
+          "status": "available"
+        },
+        {
+          "number": 17,
+          "status": "available"
+        },
+        {
+          "number": 18,
+          "status": "available"
+        },
+        {
+          "number": 19,
+          "status": "available"
+        },
+        {
+          "number": 20,
+          "status": "available"
+        },
+        {
+          "number": 21,
+          "status": "booked"
+        },
+        {
+          "number": 22,
+          "status": "booked"
+        },
+        {
+          "number": 23,
+          "status": "available"
+        },
+        {
+          "number": 24,
+          "status": "available"
+        },
+        {
+          "number": 25,
+          "status": "available"
+        },
+        {
+          "number": 26,
+          "status": "available"
+        },
+        {
+          "number": 27,
+          "status": "available"
+        },
+        {
+          "number": 28,
+          "status": "available"
+        },
+        {
+          "number": 29,
+          "status": "available"
+        },
+        {
+          "number": 30,
+          "status": "available"
+        },
+        {
+          "number": 31,
+          "status": "available"
+        },
+        {
+          "number": 32,
+          "status": "available"
+        },
+        {
+          "number": 33,
+          "status": "available"
+        },
+        {
+          "number": 34,
+          "status": "available"
+        },
+        {
+          "number": 35,
+          "status": "available"
+        },
+        {
+          "number": 36,
+          "status": "available"
+        },
+        {
+          "number": 37,
+          "status": "available"
+        },
+        {
+          "number": 38,
+          "status": "available"
+        },
+        {
+          "number": 39,
+          "status": "available"
+        },
+        {
+          "number": 40,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "b4",
+      "type": "bus",
+      "company": "Kamil Koç",
+      "from": "İzmir",
+      "to": "İstanbul",
+      "date": "2026-07-01",
+      "time": "22:00",
+      "price": 800,
+      "seats": [
+        {
+          "number": 1,
+          "status": "booked"
+        },
+        {
+          "number": 2,
+          "status": "booked"
+        },
+        {
+          "number": 3,
+          "status": "available"
+        },
+        {
+          "number": 4,
+          "status": "available"
+        },
+        {
+          "number": 5,
+          "status": "available"
+        },
+        {
+          "number": 6,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "type": "flight",
+      "company": "THY",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "08:15",
+      "price": 1800,
+      "seats": [
+        {
+          "number": 1,
+          "status": "booked"
+        },
+        {
+          "number": 2,
+          "status": "booked"
+        },
+        {
+          "number": 3,
+          "status": "booked"
+        },
+        {
+          "number": 4,
+          "status": "available"
+        },
+        {
+          "number": 5,
+          "status": "booked"
+        },
+        {
+          "number": 6,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "f2",
+      "type": "flight",
+      "company": "Pegasus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "14:45",
+      "price": 1400,
+      "seats": [
+        {
+          "number": 1,
+          "status": "booked"
+        },
+        {
+          "number": 2,
+          "status": "booked"
+        },
+        {
+          "number": 3,
+          "status": "booked"
+        },
+        {
+          "number": 4,
+          "status": "available"
+        },
+        {
+          "number": 5,
+          "status": "available"
+        },
+        {
+          "number": 6,
+          "status": "booked"
+        }
+      ]
+    },
+    {
+      "id": "f3",
+      "type": "flight",
+      "company": "AJet",
+      "from": "Ankara",
+      "to": "İstanbul",
+      "date": "2026-06-30",
+      "time": "19:30",
+      "price": 1250,
+      "seats": [
+        {
+          "number": 1,
+          "status": "booked"
+        },
+        {
+          "number": 2,
+          "status": "booked"
+        },
+        {
+          "number": 3,
+          "status": "booked"
+        },
+        {
+          "number": 4,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": "f4",
+      "type": "flight",
+      "company": "THY",
+      "from": "İzmir",
+      "to": "İstanbul",
+      "date": "2026-07-01",
+      "time": "11:00",
+      "price": 1950,
+      "seats": [
+        {
+          "number": 1,
+          "status": "available"
+        },
+        {
+          "number": 2,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "type": "bus",
+      "company": "Metro Turizm",
+      "from": "Antalya",
+      "to": "Bursa",
+      "date": "2026-07-02",
+      "time": "15:00",
+      "price": 700,
+      "seats": [
+        {
+          "number": 1,
+          "status": "available"
+        },
+        {
+          "number": 2,
+          "status": "available"
+        },
+        {
+          "number": 3,
+          "status": "available"
+        },
+        {
+          "number": 4,
+          "status": "available"
+        },
+        {
+          "number": 5,
+          "status": "available"
+        },
+        {
+          "number": 6,
+          "status": "available"
+        },
+        {
+          "number": 7,
+          "status": "available"
+        },
+        {
+          "number": 8,
+          "status": "available"
+        },
+        {
+          "number": 9,
+          "status": "available"
+        },
+        {
+          "number": 10,
+          "status": "available"
+        },
+        {
+          "number": 11,
+          "status": "available"
+        },
+        {
+          "number": 12,
+          "status": "available"
+        },
+        {
+          "number": 13,
+          "status": "available"
+        },
+        {
+          "number": 14,
+          "status": "available"
+        },
+        {
+          "number": 15,
+          "status": "available"
+        },
+        {
+          "number": 16,
+          "status": "available"
+        },
+        {
+          "number": 17,
+          "status": "available"
+        },
+        {
+          "number": 18,
+          "status": "available"
+        },
+        {
+          "number": 19,
+          "status": "available"
+        },
+        {
+          "number": 20,
+          "status": "available"
+        },
+        {
+          "number": 21,
+          "status": "available"
+        },
+        {
+          "number": 22,
+          "status": "available"
+        },
+        {
+          "number": 23,
+          "status": "available"
+        },
+        {
+          "number": 24,
+          "status": "available"
+        },
+        {
+          "number": 25,
+          "status": "available"
+        },
+        {
+          "number": 26,
+          "status": "available"
+        },
+        {
+          "number": 27,
+          "status": "available"
+        },
+        {
+          "number": 28,
+          "status": "available"
+        },
+        {
+          "number": 29,
+          "status": "available"
+        },
+        {
+          "number": 30,
+          "status": "available"
+        },
+        {
+          "number": 31,
+          "status": "available"
+        },
+        {
+          "number": 32,
+          "status": "available"
+        },
+        {
+          "number": 33,
+          "status": "available"
+        },
+        {
+          "number": 34,
+          "status": "available"
+        },
+        {
+          "number": 35,
+          "status": "available"
+        },
+        {
+          "number": 36,
+          "status": "available"
+        },
+        {
+          "number": 37,
+          "status": "available"
+        },
+        {
+          "number": 38,
+          "status": "available"
+        },
+        {
+          "number": 39,
+          "status": "available"
+        },
+        {
+          "number": 40,
+          "status": "available"
+        }
+      ],
+      "id": "9u0xFDw94sU"
+    }
+  ],
+  "bookings": [
+    {
+      "userId": "SbK0dW5mt8A",
+      "userFullName": "berna ilbaş",
+      "ticketId": "b1",
+      "company": "Kamil Koç",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "09:00",
+      "selectedSeats": [
+        19
+      ],
+      "totalPrice": 650,
+      "bookingDate": "2026-06-30T07:15:13.456Z",
+      "id": "xnNHrUg9pSk"
+    },
+    {
+      "userId": "SbK0dW5mt8A",
+      "userFullName": "berna ilbaş",
+      "ticketId": "b1",
+      "company": "Kamil Koç",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "09:00",
+      "selectedSeats": [
+        19
+      ],
+      "totalPrice": 650,
+      "bookingDate": "2026-06-30T07:15:13.457Z",
+      "id": "jnJXURoNmeY"
+    },
+    {
+      "userId": "HTXUX0FXip4",
+      "userFullName": "nur yılmaz",
+      "ticketId": "f2",
+      "company": "Pegasus",
+      "type": "flight",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "14:45",
+      "selectedSeats": [
+        6
+      ],
+      "totalPrice": 1400,
+      "bookingDate": "2026-06-30T07:18:38.868Z",
+      "id": "WkFSTNFPqwo"
+    },
+    {
+      "userId": "HTXUX0FXip4",
+      "userFullName": "nur yılmaz",
+      "ticketId": "f2",
+      "company": "Pegasus",
+      "type": "flight",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "14:45",
+      "selectedSeats": [
+        6
+      ],
+      "totalPrice": 1400,
+      "bookingDate": "2026-06-30T07:18:38.870Z",
+      "id": "j82oz-cHDaw"
+    },
+    {
+      "userId": "Qyg7Nc_i-ek",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "b1",
+      "company": "Kamil Koç",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "09:00",
+      "selectedSeats": [
+        4,
+        7
+      ],
+      "totalPrice": 1300,
+      "bookingDate": "2026-06-30T08:40:52.463Z",
+      "id": "3gXiCmOvdtM"
+    },
+    {
+      "userId": "Qyg7Nc_i-ek",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "b1",
+      "company": "Kamil Koç",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "09:00",
+      "selectedSeats": [
+        4,
+        7
+      ],
+      "totalPrice": 1300,
+      "bookingDate": "2026-06-30T08:40:52.464Z",
+      "id": "3UcZrlrwuvg"
+    },
+    {
+      "userId": "Qyg7Nc_i-ek",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "b2",
+      "company": "Metro Turizm",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "12:30",
+      "selectedSeats": [
+        1
+      ],
+      "totalPrice": 600,
+      "bookingDate": "2026-06-30T08:50:06.739Z",
+      "id": "QfXiFU6JaNg"
+    },
+    {
+      "userId": "Qyg7Nc_i-ek",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "b2",
+      "company": "Metro Turizm",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "12:30",
+      "selectedSeats": [
+        1
+      ],
+      "totalPrice": 600,
+      "bookingDate": "2026-06-30T08:50:06.740Z",
+      "id": "RkLDn0K2cto"
+    },
+    {
+      "userId": "H-gT4H7s66c",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "f2",
+      "company": "Pegasus",
+      "type": "flight",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "14:45",
+      "selectedSeats": [
+        1,
+        2,
+        3
+      ],
+      "totalPrice": 4200,
+      "bookingDate": "2026-06-30T09:10:39.440Z",
+      "id": "lRzelILTNMU"
+    },
+    {
+      "userId": "H-gT4H7s66c",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "f2",
+      "company": "Pegasus",
+      "type": "flight",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "14:45",
+      "selectedSeats": [
+        1,
+        2,
+        3
+      ],
+      "totalPrice": 4200,
+      "bookingDate": "2026-06-30T09:10:39.442Z",
+      "id": "pfZN_-2FkxE"
+    },
+    {
+      "userId": "H-gT4H7s66c",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "b2",
+      "company": "Metro Turizm",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "12:30",
+      "selectedSeats": [
+        17,
+        18
+      ],
+      "totalPrice": 1200,
+      "bookingDate": "2026-06-30T09:14:36.674Z",
+      "id": "QaOMT5wGhpE"
+    },
+    {
+      "userId": "H-gT4H7s66c",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "b2",
+      "company": "Metro Turizm",
+      "type": "bus",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "12:30",
+      "selectedSeats": [
+        17,
+        18
+      ],
+      "totalPrice": 1200,
+      "bookingDate": "2026-06-30T09:14:36.673Z",
+      "id": "fFxaE3NqkRA"
+    },
+    {
+      "userId": "H-gT4H7s66c",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "f1",
+      "company": "THY",
+      "type": "flight",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "08:15",
+      "selectedSeats": [
+        1,
+        2
+      ],
+      "totalPrice": 3600,
+      "bookingDate": "2026-06-30T10:20:58.086Z",
+      "id": "bbBXWEyataA"
+    },
+    {
+      "userId": "H-gT4H7s66c",
+      "userFullName": "berna nur  ilbaş",
+      "ticketId": "f1",
+      "company": "THY",
+      "type": "flight",
+      "from": "İstanbul",
+      "to": "Ankara",
+      "date": "2026-06-30",
+      "time": "08:15",
+      "selectedSeats": [
+        1,
+        2
+      ],
+      "totalPrice": 3600,
+      "bookingDate": "2026-06-30T10:20:58.088Z",
+      "id": "ei_VRY9YoQU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
