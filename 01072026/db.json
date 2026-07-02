@@ -1,0 +1,130 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Burak Yılmaz",
+      "email": "admin@crm.com",
+      "password": "admin123",
+      "role": "Satış Direktörü",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop"
+    }
+  ],
+  "customers": [
+    {
+      "id": "101",
+      "name": "Ahmet Yılmaz",
+      "company": "Kuzey Yazılım",
+      "email": "ahmet@kuzeyyazilim.com",
+      "phone": "+90 532 123 45 67",
+      "status": "active",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop"
+    },
+    {
+      "id": "102",
+      "name": "Zeynep Demir",
+      "company": "Beta Medya",
+      "email": "zeynep@betamedya.com",
+      "phone": "+90 541 987 65 43",
+      "status": "active",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop"
+    },
+    {
+      "id": "103",
+      "name": "Can Tekin",
+      "company": "Atlas Lojistik",
+      "email": "can@atlaslojistik.com",
+      "phone": "+90 505 456 78 90",
+      "status": "inactive",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop"
+    },
+    {
+      "id": "104",
+      "name": "Elif Şahin",
+      "company": "Pusula Danışmanlık",
+      "email": "elif@pusuladanismanlik.com",
+      "phone": "+90 555 333 22 11",
+      "status": "active",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop"
+    }
+  ],
+  "deals": [
+    {
+      "id": "1",
+      "customerId": "101",
+      "title": "Kurumsal Web Tasarım Paketi",
+      "value": 25000,
+      "stage": "proposal_sent",
+      "expectedCloseDate": "2026-07-25"
+    },
+    {
+      "id": "2",
+      "customerId": "102",
+      "title": "SEO & Sosyal Medya Hizmeti",
+      "value": 15000,
+      "stage": "contacted",
+      "expectedCloseDate": "2026-08-15"
+    },
+    {
+      "id": "3",
+      "customerId": "103",
+      "title": "CRM Yazılım Entegrasyonu",
+      "value": 60000,
+      "stage": "lost",
+      "expectedCloseDate": "2026-06-30"
+    },
+    {
+      "id": "4",
+      "customerId": "104",
+      "title": "E-Ticaret Danışmanlığı",
+      "value": 45000,
+      "stage": "won",
+      "expectedCloseDate": "2026-07-05"
+    },
+    {
+      "id": "5",
+      "customerId": "101",
+      "title": "Cloud Barındırma & Destek",
+      "value": 8500,
+      "stage": "contacted",
+      "expectedCloseDate": "2026-09-01"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "customerId": "101",
+      "text": "Ahmet Bey ile sözleşme detayları için telefon görüşmesi yapılacak.",
+      "priority": "high",
+      "completed": false,
+      "dueDate": "2026-07-10"
+    },
+    {
+      "id": "t2",
+      "customerId": "102",
+      "text": "Zeynep Hanım'a revize teklif e-postası gönderilecek.",
+      "priority": "medium",
+      "completed": true,
+      "dueDate": "2026-07-01"
+    },
+    {
+      "id": "t3",
+      "customerId": "104",
+      "text": "Elif Hanım ile ilk tanışma toplantısı düzenlenecek.",
+      "priority": "low",
+      "completed": false,
+      "dueDate": "2026-07-08"
+    }
+  ],
+  "settings": {
+    "darkMode": false,
+    "currency": "TRY",
+    "pipelineStages": [
+      "new",
+      "contacted",
+      "proposal_sent",
+      "won",
+      "lost"
+    ]
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
